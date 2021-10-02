@@ -15,13 +15,13 @@ class UserController {
     else{
       const githubUser = await api.get(`/users/${username}`)
       if (githubUser.data){
-        const {name, email, location, avatar_url, bio, login} = githubUser.data
+        const {name, email, location, avatar_url, bio} = githubUser.data
         const user = await User.create({ 
           name: name,
           email: email,
           location: location,
           avatar: avatar_url,
-          username: login,
+          username,
           bio: bio,
          });
         

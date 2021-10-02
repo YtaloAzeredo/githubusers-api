@@ -4,7 +4,6 @@ const routes = require('./routes')
 require('./bootstrap')
 require('./database')
 
-
 class App {
   constructor() {
     this.server = express()
